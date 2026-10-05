@@ -1,0 +1,12 @@
+# WiFi Security Auditor Configuration
+scanner:
+  interface: "wlan0"
+  timeout: 5
+  use_simulated: true  # Fallback to simulated data when no WiFi interface available
+
+report:
+  output_dir: "reports"
+  format: "html"
+
+thresholds:
+  signal_strength: -70  # dBm - networks below this are flagged as weak signal
